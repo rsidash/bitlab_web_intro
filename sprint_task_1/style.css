@@ -1,0 +1,9 @@
+.btn-red {
+  background-color: #890e0e;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
