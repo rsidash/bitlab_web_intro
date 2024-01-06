@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My site</title>
+</head>
+
+<body>
+    <script>
+        // Задача 5-11
+        let year = parseInt(prompt('Введите год:'))
+        
+		if (!isNaN(year) && year > 0 && year < 30000) {
+			if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+				alert("YES");
+			} else {
+				alert("NO");
+			}
+		}
+		
+		// Задача 5-12
+		let score = parseInt(prompt("Введите количество баллов за семестр по Web Technologies:"));
+		
+		if (!isNaN(score) && score >= 0) {
+			if (score >= 90) {
+				alert("A");
+			} else if (score >= 75) {
+				alert("B");
+			} else if (score >= 60) {
+				alert("C");
+			} else if (score >= 50) {
+				alert("D");
+			} else {
+				alert(" F");
+			}
+		}
+		
+		// Задача 5-13
+		let choice = parseInt(prompt("Выберите номер: 1 - Science, 2 - Humanitarian subjects, 3 - Art, 4 - Sport"));
+		
+		switch (n) {
+			case 1: 
+				let scienceChoise = parseInt(prompt("Выберите номер: 1 - Math, 2 - Physics"));
+				if (scienceChoice === 1) {
+					alert("You are Financier");
+				} else {
+					alert("You are Engineer");
+				}
+				break;
+			case 2:
+				let humanitarianChoice = parseInt(prompt("Выберите номер: 1 - History, 2 - Foreign Languages"));
+				if (humanitarianChoice === 1) {
+					alert("You are Historic or Diplomat");
+				} else {
+					alert("You are Translator");
+				}
+				break;
+			case 3:
+				let artChoice = parseInt(prompt("Выберите номер: 1 - Drawing, 2 - Singing"));
+				if (artChoice === 1) {
+					alert("You are Painter or Architect");
+				} else {
+					alert("You are Singer or Tamada");
+				}
+				break;
+			case 4:
+				let sportChoice = parseInt(prompt("Выберите номер: 1 - Team, 2 - Individual"));
+				if (sportChoice === 1) {
+					alert("You are footballer or Basketball player");
+				} else {
+					alert("You are boxer or tennis player");
+				}
+				break;
+			default:
+				break;
+		}
+		
+		// Задача 5-14
+		let sideA = parseInt(prompt("Введите длину стороны a:"));
+		let sideB = parseInt(prompt("Введите длину стороны b:"));
+		let sideC = parseInt(prompt("Введите длину стороны c:"));
+
+		if (!isNaN(sideA) && !isNaN(sideB) && !isNaN(sideC) && sideA > 0 && sideB > 0 && sideC > 0) {
+			if (sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA) {
+				alert("YES");
+			} else {
+				alert("NO");
+			}
+		}
+		
+		// Задача 5-15
+		const exchangeRate = 380;
+		let amountInTenge = parseInt(prompt("Введите сумму в тенге для обмена:"));
+
+		if (!isNaN(amountInTenge) && amountInTenge > 0) {
+			let amountInDollars = amountInTenge / exchangeRate;
+
+			if (amountInDollars % 1 === 0) {
+				alert("Вы получите " + Math.floor(amountInDollars) + " долларов.");
+			} else {
+				let cents = Math.round((amountInDollars % 1) * 100);
+				alert("Вы получите " + Math.floor(amountInDollars) + " долларов и " + cents + " центов.");
+			}
+		}
+		
+		// Задача 5-16
+		let inputMinutes = parseInt(prompt("Введите количество минут:"));
+
+		if (!isNaN(inputMinutes) && inputMinutes > 0) {
+			let hours = Math.floor(inputMinutes / 60);
+			let minutes = inputMinutes % 60;
+
+			alert(hours + " HOURS and " + minutes + " MINUTES");
+		}
+    </script>
+</body>
+</html>
