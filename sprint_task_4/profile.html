@@ -24,10 +24,10 @@
 									<a class="nav-link text-white" href="#">Твиты</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link text-white" href="login.html" id="login-nav">Вход</a>
+									<a class="nav-link text-white" href="profile.html" id="profile-nav">Профиль</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link text-white" href="register.html" id="register-nav">Регистрация</a>
+									<a class="nav-link text-white" href="login.html" id="logout-nav">Выйти</a>
 								</li>
 							</ul>
 						</div>
@@ -83,11 +83,6 @@
 			let user = findUserByEmailAndPassword();
 
 			if (user) {
-				document.getElementById("login-nav").textContent = "Профиль";
-				document.getElementById("login-nav").href = "profile.html";
-
-				document.getElementById("register-nav").textContent = "Выйти";
-				document.getElementById("register-nav").href = "login.html";
 				document.getElementById("register-nav").addEventListener('click', logout);
 
 				document.getElementById("welcome").textContent = "Добро пожаловать, " + user.name;
@@ -96,7 +91,7 @@
 				document.getElementById("countryOutput").textContent = user.country;
 				document.getElementById("birthOutput").textContent = user.birthdate;
 			} else {
-				document.getElementById("main-div").innerHTML = "<h1>Not authorized</h1>";
+				window.location.href = 'login.html';
 			}
 		});
 	</script>
