@@ -83,7 +83,7 @@
 			let user = findUserByEmailAndPassword();
 
 			if (user) {
-				document.getElementById("register-nav").addEventListener('click', logout);
+				document.getElementById("profile-nav").addEventListener('click', logout);
 
 				document.getElementById("welcome").textContent = "Добро пожаловать, " + user.name;
 				document.getElementById("emailOutput").textContent = user.email;
